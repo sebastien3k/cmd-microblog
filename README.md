@@ -8,6 +8,14 @@ A command-line interface for viewing microblog posts from a MariaDB database.
 2. Set environment variables: `DB_HOST`, `DB_USER`, `DB_NAME`, and `DB_PASSWORD`.
 3. Run the script: `python test.py`.
 
+## Database Schema
+
+The program assumes the following schema:
+- `tweets` table: `tid`, `tweet`, `date`, `uid`
+- `users` table: `uid`, `username`
+
+Adjust the SQL query in `fetch_tweets()` if your schema differs.
+
 ## Troubleshooting
 
 If you encounter "Access denied" errors:
