@@ -27,7 +27,7 @@ def fetch_tweets(cursor, offset=0, limit=5):
     query = """
     SELECT t.tid, t.post, t.date, u.username
     FROM tweets t
-    JOIN users u ON t.user_id = u.id
+    JOIN users u ON t.uid = u.uid
     ORDER BY t.date DESC
     LIMIT %s OFFSET %s
     """
