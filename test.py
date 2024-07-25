@@ -25,7 +25,7 @@ def connect_to_database():
 
 def fetch_tweets(cursor, offset=0, limit=5):
     query = """
-    SELECT t.tid, t.tweet, t.date, u.username
+    SELECT t.tid, t.post, t.date, u.username
     FROM tweets t
     JOIN users u ON t.user_id = u.id
     ORDER BY t.date DESC
@@ -41,7 +41,7 @@ def display_tweets(tweets):
         print(f"Tweet ID: {tid}")
         print(f"User: {username}")
         print(f"Date: {date.strftime('%Y-%m-%d %H:%M:%S')}")
-        print(f"Content: {content}")
+        print(f"\n{content}")
         print(f"{'=' * 50}")
 
 def main():
