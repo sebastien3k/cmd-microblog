@@ -3,10 +3,10 @@ import mysql.connector
 from datetime import datetime
 
 # Database connection configuration
-DB_HOST = os.environ.get('MDB_HOST')
-DB_USER = os.environ.get('MDB_USER')
-DB_NAME = os.environ.get('MDB_NAME')
-DB_PASSWORD = os.environ.get('MDB_PASSWORD')
+DB_HOST = os.environ.get('DB_HOST')
+DB_USER = os.environ.get('DB_USER')
+DB_NAME = os.environ.get('DB_NAME')
+DB_PASSWORD = os.environ.get('DB_PASSWORD')
 DB_PORT = 3306
 
 def connect_to_database():
